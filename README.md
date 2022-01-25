@@ -2,6 +2,11 @@
 
 Read [https://support.google.com/cloud/answer/6158849?hl=en](https://support.google.com/cloud/answer/6158849?hl=en) in order to create Project and Oauth consent screen.
 
+## Add users
+While the oauth app is in development mode you need to add the users which can access.
+![add users](add-user.png "Add User")
+
+
 ## test the oauth consent app
 open the [https://developers.google.com/oauthplayground/](https://developers.google.com/oauthplayground/) google playground
 select a scope, for initial test you can use google Calendar API
