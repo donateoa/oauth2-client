@@ -14,7 +14,21 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ng-container *ngIf="isSignedIn else notSignedInTemplate">
+      <pre>{{user| json}}</pre>
+      <ion-button (click)="onSignOutClick()" fill="clear">
+        <ion-icon name="logo-google" slot="start"></ion-icon>
+        <ion-label>Sign out</ion-label>
+        <ion-icon name="log-out-outline" slot="end"></ion-icon>
+      </ion-button>
+    </ng-container>
+    <ng-template #notSignedInTemplate>
+
+      <ion-button (click)="onSignInClick()">
+        <ion-icon name="logo-google" slot="start"></ion-icon>
+        <ion-label>Sign in</ion-label>
+        <ion-icon name="log-in-outline" slot="end"></ion-icon>
+      </ion-button>
+    </ng-template>
   </div>
 </ion-content>
